@@ -1,0 +1,45 @@
+create database xsgl
+on 
+primary 
+(
+name = 'xsgl',
+Filename = 'C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA\xsgl.mdf',
+size = 10MB,
+maxsize = unlimited,
+filegrowth = 1MB
+)
+log on
+(
+name = 'xsgl_log',
+filename = 'C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA\xsgl_log.ldf',
+size = 1mb,
+maxsize = unlimited,
+filegrowth = 10%
+)
+go
+
+use xsgl
+go
+create table stutent 
+(
+	sno char(10) not null primary key,
+	sname char(12) not null,
+	ssex char(4) not null,
+	sage int not null,
+	sdept char(40) not null
+)
+go
+create table  sc
+(
+	sno char(10) not null ,
+	cno char(16) not null ,
+	grade int not null
+)
+go
+create table course 
+(
+	cno char(16) not null,
+	cname char(16) not null,
+	cpno char(4) not null,
+	xf int not null
+)

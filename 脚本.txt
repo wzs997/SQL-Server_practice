@@ -1,0 +1,54 @@
+USE [xsgl]
+GO
+/****** Object:  Table [dbo].[stutent]    Script Date: 11/08/2018 09:21:05 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[stutent](
+	[sno] [char](10) NOT NULL,
+	[sname] [char](12) NOT NULL,
+	[ssex] [char](4) NOT NULL,
+	[sage] [int] NOT NULL,
+	[sdept] [char](40) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[sno] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[sc]    Script Date: 11/08/2018 09:21:05 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[sc](
+	[sno] [char](10) NOT NULL,
+	[cno] [char](16) NOT NULL,
+	[grade] [int] NOT NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[course]    Script Date: 11/08/2018 09:21:05 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[course](
+	[cno] [char](16) NOT NULL,
+	[cname] [char](16) NOT NULL,
+	[cpno] [char](4) NOT NULL,
+	[xf] [int] NOT NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
